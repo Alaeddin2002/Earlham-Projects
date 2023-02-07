@@ -1,0 +1,28 @@
+Table "public.netflix_dataset_movie"
+  Column  |          Type          | Modifiers
+----------+------------------------+-----------
+ movie_id | integer                | not null
+ year_    | integer                |
+ name     | character varying(500) |
+Indexes:
+    "netflix_dataset_movie_pkey" PRIMARY KEY, btree (movie_id)
+
+Table "public.netflix_dataset_rating"
+  Column  |  Type   | Modifiers
+----------+---------+-----------
+ user_id  | integer |
+ rating   | integer |
+ movie_id | integer |
+ key_     | integer | not null
+Indexes:
+    "netflix_dataset_rating_pkey" PRIMARY KEY, btree (key_)
+
+ count
+-------
+ 17770
+(1 row)
+
+  count
+---------
+ 1048575
+(1 row)

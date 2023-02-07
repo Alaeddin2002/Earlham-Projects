@@ -1,0 +1,16 @@
+size	color	earshape	tail	iscat
+tiny	white	pointed	yes	no
+tiny	white	pointed	yes	yes
+tiny	brown	pointed	yes	no
+small	gray	pointed	no	yes
+small	gray	pointed	yes	yes
+small	orange	pointed	yes	yes
+small	gray	folded	yes	yes
+small	gray	pointed	yes	no
+small	brown	folded	yes	no
+medium	gray	folded	yes	no
+medium	gray	pointed	yes	no
+medium	brown	pointed	yes	yes
+large	brown	folded	yes	no
+large	yellow	folded	yes	no
+enormous	brown	folded	yes	no

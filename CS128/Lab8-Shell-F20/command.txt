@@ -1,0 +1,13 @@
+cd Lab8-Shell-F20/
+cp ~charliep/courses/cs128/first.dat Lab8-Shell-F20.ipynb
+cp ~charliep/courses/cs128/second.dat Lab8-Shell-F20.ipynb
+cp ~charliep/courses/cs128/third.dat Lab8-Shell-F20.ipynb
+grep AACCTTNN ~charliep/courses/cs128/first.dat ~charliep/courses/cs128/second.dat > fourth.dat
+cat ~charliep/courses/cs128/third.dat >> fourth.dat > fifth.dat
+wc fifth.dat > fifth-count.txt
+grep -v AACCTTNN fifth.dat > sixth.dat
+wc -l fourth.dat sixth.dat
+grep ATG ~charliep/courses/cs128/first.dat ~charliep/courses/cs128/second.dat ~charliep/courses/cs128/third.dat|grep -v TAG > seventh.dat
+grep CAT ~charliep/courses/cs128/first.dat ~charliep/courses/cs128/second.dat ~charliep/courses/cs128/third.dat|grep TAG > eighth.dat
+wc -w seventh.dat eighth.dat
+history > history.txt

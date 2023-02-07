@@ -1,0 +1,16 @@
+{
+  "Editor": {
+    "file_extension_modes": {
+      ".c": "C",
+      ".txt": "Markdown",
+      ".sql": "PLSQL",
+      ".py": "Python",
+      ".SQL": "PLSQL",
+      ".python": "Python"
+    },
+    "codemirror_options": {
+      "vimMode": false,
+      "keyMap": "sublime"
+    }
+  }
+}

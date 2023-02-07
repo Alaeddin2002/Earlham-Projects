@@ -1,0 +1,64 @@
+? default(debugmem,0);
+default(debugmem,0);
+? default(timer,0);
+default(timer,0);
+? default(breakloop,0);
+default(breakloop,0);
+? default(path,".");
+default(path,".");
+? default(help, "gphelp -detex");
+default(help, "gphelp -detex");
+? default(log,0);
+default(log,0);
+? default(nbthreads,1);
+default(nbthreads,1);
+? setrand(464349375)
+setrand(464349375)
+? sage=vector(1024,k,0);
+sage=vector(1024,k,0);
+? sage[1]=Pi;
+sage[1]=Pi;
+? print(sage[1])
+print(sage[1])
+3.1415926535897932384626433832795028842
+? sage[2]=Pi;
+sage[2]=Pi;
+? sage[3]=0;
+sage[3]=0;
+? sage[4]=gen(sage[3]);
+sage[4]=gen(sage[3]);
+  ***   at top-level: sage[4]=gen(sage[3])
+  ***                         ^------------
+  ***   not a function in function call
+? sage[5]=gen();
+sage[5]=gen();
+  ***   at top-level: sage[5]=gen()
+  ***                         ^-----
+  ***   not a function in function call
+? sage[6]=_an_element_;
+sage[6]=_an_element_;
+  ***   syntax error, unexpected $undefined: sage[6]=_an_element_;
+  ***                                                ^-------------
+? sage[7]=pi;
+sage[7]=pi;
+? sage[8]=1;
+sage[8]=1;
+? sage[9]=180;
+sage[9]=180;
+? sage[10]=sage[9] / sage[2];
+sage[10]=sage[9] / sage[2];
+? sage[11]=90;
+sage[11]=90;
+? sage[12]=sage[11] * sage[10];
+sage[12]=sage[11] * sage[10];
+? sage[13]=arccos(sage[12]);
+sage[13]=arccos(sage[12]);
+  ***   at top-level: sage[13]=arccos(sage[12])
+  ***                          ^----------------
+  ***   not a function in function call
+? sage[14]=arccos(sage[12]);
+sage[14]=arccos(sage[12]);
+  ***   at top-level: sage[14]=arccos(sage[12])
+  ***                          ^----------------
+  ***   not a function in function call
+? 

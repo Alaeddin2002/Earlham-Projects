@@ -1,0 +1,37 @@
+import discord
+from discord.ext import commands
+import asyncio
+
+
+
+client = discord.Client()
+
+@client.event
+async def on_ready():
+    print('We have logged in as {0.user}'.format(client))
+
+bot = commands.Bot(command_prefix='$')
+
+@bot.command()
+async def test(ctx):
+    pass
+@client.event
+async def on_message(message):
+    if message.author == client.user:
+        return
+
+    if message.content.startswith('$attendance'):
+        emoji = '\N{THUMBS UP SIGN}'
+        v = await message.channel.send("Hello!")
+        await v.add_reaction(emoji)
+        await asyncio.sleep(60)
+        reaction = {react.emoji:react.count for react in message.reactions}
+        await message.channel.send(reaction)
+
+
+
+
+
+
+
+client.run('NzY3MzYzODAyMzE1NjIwMzYy.X4w1Ow.qYHKnXx0hhTFXnrkje-GTqpQTdQ')

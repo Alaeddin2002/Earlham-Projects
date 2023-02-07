@@ -1,0 +1,17 @@
+addPatron, 1234567
+addPatron, 7654321
+addPatron, 1244567
+addPatron, 7653421
+addPatron, 1984567
+addPatron, 7633321
+addBook, 076790818X, “A Short History of Nearly Everything”
+addBook, 0060589469, "Zen and the Art of Motorcycle Maintenance"
+addBook, 076790818X, “A Short History of Nearly Everything”
+addBook, 0743216768, "The Measure of All Things"
+addBook, 0393602338, "The Norton Shakespeare"
+checkout, 7654321, 076790818X
+checkin, 1234567, 0060589469
+checkout, 1984567, 0060589469
+checkout, 1984567, 076790818X
+removeBook, 076790818X
+removePatron, 7633321

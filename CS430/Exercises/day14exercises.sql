@@ -1,0 +1,14 @@
+START TRANSACTION;
+
+INSERT INTO product values ('E','1200','laptop') ; INSERT INTO laptop values('1200','2.5','1024','100','19.7','2100');
+SELECT * FROM product NATURAL JOIN laptop;
+
+COMMIT;
+
+START TRANSACTION READ ONLY;
+COMMIT;
+
+UPDATE PC
+SET RAM =  RAM * 2, hd = hd + 60;
+SELECT * FROM PC;
+

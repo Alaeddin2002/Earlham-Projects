@@ -1,0 +1,20 @@
+CREATE FUNCTION double_it(subtotal real) RETURNS real AS $$
+BEGIN
+RAISE NOTICE 'HELLO,World!';
+RETURN subtotal * 2.0;
+END;
+$$
+LANGUAGE plpgsql;
+
+CREATE FUNCTION price_with_tax(price money, tax real, range money) RETURNS  money AS $$
+BEGIN
+RAISE NOTICE 'HELLO,World!';
+If price > range
+    THEN
+        RETURN price * (1+tax);
+ELSE
+return price;
+END IF;
+END;
+$$
+LANGUAGE plpgsql;

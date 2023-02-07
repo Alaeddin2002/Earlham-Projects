@@ -1,0 +1,55 @@
+import discord
+from discord.ext import commands
+
+
+client = discord.Client()
+
+@client.event
+async def on_ready():
+    print('We have logged in as {0.user}'.format(client))
+
+def int_dialogue(bot, message, question, start, end):
+    bot = commands.Bot(command_prefix='$')
+    @bot.command()
+    async def test(ctx):
+        pass
+    @commands.command()
+    async def test(ctx):
+        pass
+
+        bot.add_command(test)
+    message = "$attendance"
+    question = "Reply to this message with 👍 for attendance"
+    start = 1
+    end = 30
+
+
+    start = 0 if start < 0 else start
+    end = 30 if end > 30 else end
+    question.set_author(name=message.author.display_name, icon_url=user_avatar(message.author))
+    confirmation = await message.channel.send(question)
+    [await confirmation.add_reaction(int_reacts[preac]) for preac in range(start, end + 1)]
+
+    def check_emote(reac, usr):
+
+        same_author = usr.id == msg.author.id
+        same_message = reac.message.id == confirmation.id
+        valid_reaction = str(reac.emoji) in int_reacts
+        return same_author and same_message and valid_reaction
+
+    try:
+        ae, au = await bot.wait_for('reaction_add', timeout=60, check = check_emote)
+        timeout = False
+        number = None
+        for react_index, int_react in enumerate(int_reacts):
+            if int_react == str(ae.emoji):
+                number = react_index
+                break
+    except asyncio.TimeoutError:
+        number = None
+        timeout = True
+    try:
+        await confirmation.delete()
+    except discord.NotFound:
+        pass
+    return number, timeout
